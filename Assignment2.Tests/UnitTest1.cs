@@ -55,7 +55,8 @@ namespace Assignment2.Tests
             //Arrange
             DateTime Now = DateTime.Now;
             TimeSpan Span = Now.AddYears(1) - Now;
-            Student Student = new Student(13, "Ahmed", "Galal", DateTime.Now.Subtract(Span*5),DateTime.Now.Subtract(Span*2),DateTime.Now.Subtract(Span*2));
+            DateTime endDate = DateTime.Now.Subtract(Span * 2);
+            Student Student = new Student(13, "Ahmed", "Galal", DateTime.Now.Subtract(Span*5),endDate,endDate);
             
             //Act
             Status Status = Student.Status;

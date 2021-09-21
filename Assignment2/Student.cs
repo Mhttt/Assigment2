@@ -25,7 +25,8 @@ namespace Assignment2
                 {
                     return Status.Graduated;
                 }
-                else return Status.Active; //Ved ikke hvad der skal returneres her
+
+                throw new InvalidOperationException("Please write another date");
 
 
 
