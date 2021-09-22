@@ -36,7 +36,7 @@ namespace Assignment2
 
         public override string ToString()
         {
-            return String.Format("Name:{0} {1}, ID: {2}, Start Date: {3:d} , Graduation Date: {4:d}, End Date: {5:d}, Status: {6}", givenName, surName, id, startDate,GraduationDate,EndDate);
+            return String.Format("Name:{0} {1}, ID: {2}, Start Date: {3:d}, Graduation Date: {4:d}, End Date: {5:d}, Status: {6}", givenName, surName, id, startDate,GraduationDate,EndDate);
         }
 
         public static void main(string[] args) 

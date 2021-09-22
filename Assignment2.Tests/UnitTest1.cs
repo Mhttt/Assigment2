@@ -64,6 +64,25 @@ namespace Assignment2.Tests
             Assert.Equal(Status.Graduated,Status);
         }
 
+        [Fact]
+        public void ToString()
+        {
+            //arrange
+            String t1 = "Name:Ahmed Galal, ID: 13, Start Date: 01-01-2020, Graduation Date: 01-01-2023, End Date: 01-01-2023, Status: Active", givenName, surName, id, startDate,GraduationDate,EndDate);
+
+            DateTime startDate = DateTime(2020, 1, 1);
+            DateTime endGraduationDate = DateTime(2023, 1, 1);
+
+            Student Student = new Student(13, "Ahmed", "Galal", startDate, endGraduationDate, endGraduationDate);
+
+            //act
+            String t2 = Student.ToString();
+
+            //assert
+            Assert.Equal(t1,t2);
+
+        }
+
 
         
     }
