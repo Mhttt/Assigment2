@@ -8,27 +8,12 @@ namespace Assignment2
         {
             get
             {
-                if (EndDate < DateTime.Now && EndDate < GraduationDate) // bug skal fikses?
-                {
-                    return Status.Dropout;
-                }
-                if (DateTime.Now <= startDate.AddYears(1))
-                {
-                    return Status.New;
-                }
-                if (DateTime.Now > startDate && DateTime.Now < GraduationDate)
-                {
-                    return Status.Active;
-                }
-
-                if (DateTime.Now > GraduationDate && GraduationDate <= EndDate)
-                {
-                    return Status.Graduated;
-                }
+                if (EndDate < DateTime.Now && EndDate < GraduationDate) {return Status.Dropout;}
+                if (DateTime.Now <= startDate.AddYears(1)) {return Status.New;}
+                if (DateTime.Now > startDate && DateTime.Now < GraduationDate) {return Status.Active;}
+                if (DateTime.Now > GraduationDate && GraduationDate <= EndDate) {return Status.Graduated;}
 
                 throw new InvalidOperationException("Please write another date");
-
-
 
             } 
             
