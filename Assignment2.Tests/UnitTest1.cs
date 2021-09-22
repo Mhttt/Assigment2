@@ -64,7 +64,21 @@ namespace Assignment2.Tests
             Assert.Equal(Status.Graduated,Status);
         }
 
+        [Fact]
+        public void Test_ImmutableStudent_Equality() {
 
+            //Arrange
+            DateTime Now = DateTime.Now;
+            TimeSpan Span = Now.AddYears(1) - Now;
+            DateTime endDate = DateTime.Now.Subtract(Span * 2);
+            DateTime GradDate = Now.AddYears(3);
+            var immutStudent1 = new ImmutableStudent() {Id = 12, GivenName = "Michael", Surname = "Tran", Status = 0, StartDate = Now, EndDate = endDate, GraduationDate = GradDate};
+            var immutStudent2 = new ImmutableStudent() {Id = 12, GivenName = "Michael", Surname = "Tran", Status = 0, StartDate = Now, EndDate = endDate, GraduationDate = GradDate};
+            //Act
+            
+            Assert.True(immutStudent1 == immutStudent2);
         
+         }
+
     }
 }
