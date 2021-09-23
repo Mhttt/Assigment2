@@ -61,6 +61,4 @@ namespace Assignment2
         public DateTime GraduationDate {get; init;}
 
     }
-        }
-    }
 }
