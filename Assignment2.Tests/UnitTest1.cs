@@ -103,6 +103,23 @@ namespace Assignment2.Tests
             Assert.Equal(immutStudent1.ToString(), immutStudent2.ToString()); 
        
       }
+        public void ToString_returns_right_string()
+        {
+            //arrange
+            String t1 = "Name:Ahmed Galal, ID: 13, Start Date: 01/01/2020, Graduation Date: 01/01/2023, End Date: 01/01/2023, Status: Active";
+
+            DateTime StartDate = new DateTime(2020, 1, 1);
+            DateTime endGraduationDate = new DateTime(2023, 1, 1);
+
+            Student Student = new Student(13, "Ahmed", "Galal", StartDate, endGraduationDate, endGraduationDate);
+
+            //act
+            String t2 = Student.ToString();
+
+            //assert
+            Assert.Equal(t1,t2);
+
+        }
 
     }
 }
