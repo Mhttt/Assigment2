@@ -45,6 +45,20 @@ namespace Assignment2
             TimeSpan Span = Now.AddMonths(9) - Now;
             Student Student = new Student(13, "Ahmed", "Galal", DateTime.Now.Subtract(Span),DateTime.Now.AddYears(4),DateTime.Now.AddYears(4));
             Console.WriteLine(Student.ToString());
+
+            var imStudent = new ImmutableStudent() { Id = 10, GivenName = "Mikkel"};
+
         }
+    }
+
+    public record ImmutableStudent{
+        public int Id {get; init;}
+        public string GivenName{get; init;}
+        public string Surname {get; init;}
+        public Status Status {get; init;}
+        public DateTime StartDate {get; init;}
+        public DateTime EndDate {get; init;}
+        public DateTime GraduationDate {get; init;}
+
     }
 }
